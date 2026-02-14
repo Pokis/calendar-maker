@@ -41,13 +41,13 @@ function App() {
       const pageElements = pages.map(
         (_, i) => document.getElementById(`print-page-${i}`) as HTMLElement
       ).filter(Boolean);
-      await generatePdf(pageElements);
+      await generatePdf(pageElements, monthImages);
     } catch (err) {
       console.error('PDF generation failed:', err);
     } finally {
       setIsGenerating(false);
     }
-  }, [pages, setIsGenerating]);
+  }, [pages, setIsGenerating, monthImages]);
 
   return (
     <div className="app">
