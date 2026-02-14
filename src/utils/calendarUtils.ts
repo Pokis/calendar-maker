@@ -43,6 +43,10 @@ function buildWeeks(year: number, month: number): (number | null)[][] {
         }
         weeks.push(currentWeek);
     }
+    // Pad to exactly 6 rows so all months have the same grid height
+    while (weeks.length < 6) {
+        weeks.push(new Array(7).fill(null));
+    }
 
     return weeks;
 }
