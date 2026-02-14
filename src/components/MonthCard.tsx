@@ -57,7 +57,14 @@ export function MonthCard({
             >
                 {image ? (
                     <>
-                        <img src={image} alt={data.name} className="month-photo" />
+                        <div
+                            className="month-photo"
+                            style={{
+                                backgroundImage: `url(${image})`,
+                            }}
+                            role="img"
+                            aria-label={data.name}
+                        />
                         {!isPrintMode && (
                             <button
                                 className="remove-photo-btn"
