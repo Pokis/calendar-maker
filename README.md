@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# 📅 Calendar Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, user-friendly web application for creating and printing personalized calendars. Designed with a focus on simplicity and high-quality output, optimized for the year 2026.
 
-Currently, two official plugins are available:
+![App Screenshot](docs/in-app-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **2026 Ready**: Pre-configured for the 2026 calendar year.
+- **Custom Photos**: Upload your own images for each month to create a personalized experience.
+- **Bilingual Support**: Full support for both **English** and **Lithuanian** languages.
+- **Print Optimized**: Layout designed to fit four months beautifully on a single A4 page.
+- **PDF Export**: Generate high-quality PDFs ready for printing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm (usually comes with Node.js)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Pokis/calendar-maker.git
+   cd calendar-maker
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Launching the App
+
+Start the development server:
+```bash
+npm run dev
 ```
+The app will be available at `http://localhost:5173`.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Examples
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Calendar Preview
+![Calendar Examples](docs/calendar-screenshot.png)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Sample PDF
+You can view an example of the generated output here:
+[📄 example-calendar.pdf](docs/example-calendar.pdf)
+
+## 🛠️ Tech Stack
+
+- **React** + **TypeScript**
+- **Vite** for fast development
+- **Vanilla CSS** with **CSS Variables**
+- **Lucide React** for icons
+- **jspdf** & **html2canvas** for PDF generation
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
